@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <!-- FONT
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+	  <!-- CSS
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script type="text/javascript" src="css/jquery-3.2.1.min.js"></script>
+
+	<title>Go-Food KW</title>
+</head>
+<body style="background-color: #f6f6f6">
+ 	<style type="text/css">
+ 		.header{
+ 			background-color: #203682;
+			/*border-top: 0.5pt solid #203682;*/
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    height: 10%;
+		    text-align: center;
+		    color: white;
+		}
+
+		.blackborder{
+			border-top: 0.5pt solid #eeeeee;
+		}
+
+		.clicked{
+			color: #006400;
+			border-bottom: 2pt solid #006400;
+		}
+
+		.notclicked{
+			border-bottom: 2pt solid #ffffff;
+			color:black;
+		}
+
+		.search-container{
+			float: right;
+		}
+
+		.isi{
+			display: inline-block;
+			padding: 2%;
+		}
+
+		::-webkit-scrollbar{
+		 	display: none;
+		}
+ 	</style>
+
+ 	<div class="container u-full-width" style="padding-left: 0;padding-right: 0;">
+ 		<div class="header">
+ 			<label style="margin-bottom: 0; padding-top: 3%; padding-bottom: 3%;"><h4 style="margin-bottom: 0;">BCA Food</h4></label>
+ 		</div>
+
+ 		<div class="u-full-width" style="background-color: #ffffff">
+		    <table style="background-color: #ffffff; padding-bottom: 1%;margin-top: 0; margin-bottom: 0; margin-left: 4%; width:91.5%;">
+		      	<tr>
+		      		<td style="width:8%;padding-left: 2%;padding-right: 0; padding-top: 2%; padding-right: 0;">
+		      				<i class="fa fa-search fa-lg"></i>
+		      		</td>
+		      		<td style="padding-right: 3%; padding-left:1%; padding-top: 3%;">
+		      			<input type="text" placeholder="Search.." name="search" class="u-max-full-width" style=" margin-bottom: 0; width:100%;">
+		      		</td>
+		      	</tr>
+		    </table>
+		</div>
+
+		<div class="container u-full-width" style="overflow: auto; white-space: nowrap;padding-left: 0; margin-right: 2%;  background-color: #ffffff;">
+			<!-- <img src="img/fastfood.png" style="max-width: 10%; max-height: 10%" class="isi">
+			<label class="isi"> Fast Food </label>
+
+			<img src="img/cafe.png" style="width: 20%; height:20%" class="isi">
+			<label class="isi"> Cafe </label> -->
+
+			<table style="margin:0; padding: 0; overflow-x: auto; min-height: 50px;" class="u-full-width">
+				<tr style="margin:0; padding: 0">
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" id="first" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 2% 0 0 0;">
+									<img src="img/fastfood.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 0;">Fast Food</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 5% 0 0 0;">
+									<img src="img/western.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 2%;">Western</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 2% 0 0 0;">
+									<img src="img/italian.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 2%;">Italian</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 2% 0 0 0;">
+									<img src="img/japanese.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 2%;">Japanese</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 0;">
+									<img src="img/middleeast.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 2%;">Middle East</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 0;">
+									<img src="img/indo.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 2%;">Indonesian</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 2% 0 0 0;">
+									<img src="img/fine.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 2% 0 0;">Fine Dining</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+					<td style="margin:0; padding: 0; min-width: 120px;" name="category" class="notclicked">
+						<table style="margin: 0; padding: 0">
+							<tr style="margin:0; padding: 0">
+								<td style="width: 30%; margin: 0; padding: 0;">
+									<img src="img/cafe.png" class="u-max-full-width">
+								</td>
+								<td style="margin:0; padding: 0;">
+									<label style="margin: 0; padding: 0 0 0 2%;">Cafe</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+			</table>
+		</div>
+
+	    <table class="u-full-width" style="margin-top: 5%;">
+	    	<tbody>
+	    		<tr>
+	    			<td style="padding-left: 5%; padding-right: 1%; padding-bottom: 1%; margin-bottom: 0;">
+	    				<a href="mcd.html" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff; margin-bottom: 0">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/mcd.png" class="u-max-full-width">
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center; padding-bottom: 0;margin-bottom: 0;">
+		    							<h5 style="margin-bottom: 6%;">McDonald's</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+
+	    			<td style="padding-right: 5%; padding-left: 1%; padding-bottom: 1%; margin-bottom: 0">
+	    				<a href="#" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff; margin-bottom: 0">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/kfc.png" class="u-max-full-width">
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center; padding-bottom: 0;margin-bottom: 0;">
+		    							<h5 style="margin-bottom: 6%;">KFC</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+	    		</tr>
+
+	    		<tr>
+	    			<td style="padding-left: 5%; padding-right: 1%; padding-top: 2%; margin-bottom: 0; padding-bottom: 1%;">
+	    				<a href="#" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff; margin-bottom: 0">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/aw.png" class="u-max-full-width">			
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center;padding-bottom: 0;margin-bottom: 0; ">
+		    							<h5 style="margin-bottom: 6%;">A&W</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+
+	    			<td style="padding-right: 5%; padding-left: 1%; padding-top: 2%; margin-bottom: 0;padding-bottom: 1%">
+	    				<a href="#" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff; margin-bottom: 0">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/bk.png" class="u-max-full-width">
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center;padding-bottom: 0;margin-bottom: 0;">
+		    							<h5 style="margin-bottom: 6%;">Burger King</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+	    		</tr>
+
+	    		<tr>
+	    			<td style="padding-left: 5%; padding-right: 1%;padding-top: 2%; margin-top: 0">
+	    				<a href="#" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/pizzahut.png" class="u-max-full-width">
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center;padding-bottom: 0;margin-bottom: 0; ">
+		    							<h5 style="margin-bottom: 6%;">Pizza Hut</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+
+	    			<td style="padding-right: 5%; padding-left: 1%;padding-top: 2%; margin-top: 0">
+	    				<a href="#" style="color: black; text-decoration: none;">
+		    				<table class="u-full-width" style="background-color: #ffffff">
+		    					<tr>
+		    						<td style="padding-left: 5%; padding-right: 5%">
+		    							<img src="img/wendys.png" class="u-max-full-width">
+		    						</td>
+		    					</tr>
+		    					<tr class="blackborder">
+		    						<td style="text-align: center;padding-bottom: 0;margin-bottom: 0;">
+		    							<h5 style="margin-bottom: 6%;">Wendy's</h5>
+		    						</td>
+		    					</tr>
+		    				</table>
+	    				</a>
+	    			</td>
+	    		</tr>		
+	    	</tbody>
+	    </table>
+	</div>
+	<script type="text/javascript">
+
+		$(document).ready()
+		{
+			$('td[id="first"]').removeClass('notclicked');
+			$('td[id="first"]').addClass('clicked');
+		}
+
+		$('td[name="category"]').click(function(){
+			$('td[name="category"].clicked').removeClass('clicked');
+			$('td[name="category"].clicked').addClass('notclicked');
+			$(this).removeClass('notclicked');
+			$(this).addClass('clicked');
+		});
+	</script>
+</body>
+</html>

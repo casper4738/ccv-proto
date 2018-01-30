@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- CSS
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<script type="text/javascript" src="css/jquery-3.2.1.min.js"></script>
+</head>
+<body style="background-color:#f6f6f6;">
+	<style type="text/css">
+		.blackborder{
+			border-bottom: 0.5pt solid #f6f6f6;;
+		}
+	</style>
+
+	<div class="container u-full-width">
+
+		<table class="u-full-width" style="background-color:#ffffff; margin-top: 5%">
+			<thead>
+				<tr class="blackborder">
+					<td colspan="2" style="padding-left: 5%"><h3>Items Ordered</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 65%; padding-left: 5%;">
+						<h5>PaNas 2</h5>
+					</td>
+					<td style="padding-right: 5%; padding-bottom: 0">
+						<label style="float: right"><h5>Rp 60.000,00</h5></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-left: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0">
+						<h6>2 pc Chicken + Rice + 1 FruitTea</h6>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-right: 5%;padding-top: 0; margin-top: 0; margin-left: 10%;" class="blackborder">
+						<h6 style="float: right;"> Qty : 2 </h6>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="width: 65%; padding-left: 5%;">
+						<h5>PaMer</h5>
+					</td>
+					<td style="padding-right: 5%; padding-bottom: 0">
+						<label style="float: right"><h5>Rp 150.000,00</h5></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-left: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0">
+						<h6>5 pc Chicken + 3 Rice + 3 FruitTea</h6>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding-right: 5%;padding-top: 0; margin-top: 0;">
+						<h6 style="float: right;"> Qty : 1 </h6>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="u-full-width" style="background-color:#ffffff; margin-top: 5%">
+			<thead>
+				<tr class="blackborder">
+					<td style="padding-left: 5%"><h3>Deliver To</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="padding-left: 5%; padding-right: 5%; margin-bottom: 0; padding-bottom: 0;">
+					    <input type="radio" name="address" id="template" checked="true"> <label style="vertical-align: 0.25em;">Menara BCA, Jl. MH Thamrin No 1, Jakarta Pusat</label>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left: 5%; padding-right: 5%; margin-bottom: 0; padding-top: 3%;">
+					    <input type="radio" name="address" id="tx"> <label style="vertical-align: top; width: 90%;"><textarea name="inputaddress" style="min-height: 50px; width: 95%"></textarea></label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="u-full-width" style="background-color:#ffffff; margin-top: 5%">
+			<thead>
+				<tr class="blackborder">
+					<td style="padding-left: 5%"><h3>Payment Method</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="padding-left: 5%; padding-right: 5%; margin-bottom: 0; padding-bottom: 0;">
+					    <input type="radio" name="payment"> <label style="vertical-align: 0.25em;">BCA Mobile</label>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left: 5%; padding-right: 5%; margin-bottom: 0; padding-top: 3%;">
+					    <input type="radio" name="payment"> <label style="vertical-align: 0.25em;">Others</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="u-full-width" style="background-color:#ffffff; margin-top: 5%">
+			<thead>
+				<tr class="blackborder">
+					<td style="padding-left: 5%"><h3>Payment Details</h3></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="padding-left: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0; width:70%">
+						<label>Price</label>
+					</td>
+					<td style="padding-right: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0">
+						<label style="float: right">Rp 210.000,00</label>
+					</td>
+				</tr>
+				<tr class="blackborder">
+					<td style="padding-left: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0; width:70%">
+						<label>Delivery Fee</label>
+					</td>
+					<td style="padding-right: 5%; padding-top: 0; margin-top: 0; padding-bottom: 0">
+						<label style="float: right">Rp 10.000,00</label>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left: 5%;">
+						<label>Total</label>
+					</td>
+					<td style="padding-right: 5%;">
+						<label style="float: right">Rp 220.000,00</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<a href="intent://bca.com/payment/merchant/?vanum=5270864025&name=XYZ%20ZYX&amount=10000#Intent;scheme=com.bca;package=com.bca;end"><button class="button-primary u-full-width" style="margin-top: 4%; background-color: #203682; border-color: #202d82; height: 38px; margin-top: 0">Pay</button></a>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready()
+		{
+			$('textarea[name="inputaddress"]').attr('disabled', true);
+		}
+		$('input[name="address"]').on('change', function(){
+			var isDisabled = $('textarea[name=inputaddress]').prop('disabled');
+			if(isDisabled == true)
+			{
+				$('textarea[name="inputaddress"]').attr('disabled', false).focus();
+			}else
+			{
+				$('textarea[name="inputaddress"]').attr('disabled', true);
+			}
+		});
+	</script>
+</body>
+</html>
